@@ -54,6 +54,33 @@ node skills/english-picturebook-video/scripts/export-manual-seedance-package.mjs
 node skills/english-picturebook-video/scripts/workflow-state.mjs status ./my-story
 ```
 
+## BytePlus Ark automation
+
+The optional `byteplus-ark` route automates Seedream illustration generation and Seedance image-to-video task submission. It does not create a BytePlus account or API keys on a user's behalf, and it refuses to submit paid generation work unless the user passes `--confirm`.
+
+1. Create a local `.env` from `.env.example`, then add the user's `ARK_API_KEY` and, for video, their `LAS_API_KEY`. Never commit that file.
+2. Run the no-cost readiness check:
+
+   ```bash
+   node skills/english-picturebook-video/scripts/byteplus-ark.mjs doctor ./my-story
+   ```
+
+3. Generate and approve one character anchor, then generate the six scene images:
+
+   ```bash
+   node skills/english-picturebook-video/scripts/byteplus-ark.mjs anchor ./my-story --confirm
+   node skills/english-picturebook-video/scripts/byteplus-ark.mjs images ./my-story --anchor-approved --confirm
+   ```
+
+4. Submit and review one five-second video scene at a time; then poll and download the finished clip:
+
+   ```bash
+   node skills/english-picturebook-video/scripts/byteplus-ark.mjs video ./my-story --scene 01 --scene-approved --confirm
+   node skills/english-picturebook-video/scripts/byteplus-ark.mjs status ./my-story
+   ```
+
+See `skills/english-picturebook-video/references/byteplus-ark.md` for prerequisites, safety limits, and the user-facing workflow.
+
 The `examples/benny-and-the-apple/` folder is a fully valid reference project.
 
 ## Provider policy

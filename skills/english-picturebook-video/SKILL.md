@@ -12,6 +12,7 @@ Create a production package for an original English picturebook short. The packa
 Ask only when the requested route is genuinely unclear. Otherwise use the user's stated choice.
 
 - `manual-seedance` is the default: create and validate six image prompts and six five-second motion prompts; write `outputs/seedance-package.md`; wait for the user to generate and provide the clips.
+- `byteplus-ark` is an optional connected route for users who have configured BytePlus Ark and LAS access. Read `references/byteplus-ark.md`, run its no-cost `doctor` command, state the planned paid requests, and require `--confirm` immediately before each generation submission. Generate and approve the anchor before scene images; submit only one image-to-video scene at a time.
 - `connected-generator` is optional: only use an already available, configured video-generation connector. Explain the planned number of clips and obtain confirmation immediately before any billable generation. Never request or log API keys in chat or put them in project files.
 - `local-motion-book` is the no-video-credit fallback: generate still illustrations, then use local motion, captions, and narration rather than claiming the images are generative video.
 
@@ -24,7 +25,7 @@ For actual connected video generation with ChatCut, read and follow its current 
 3. Draft exactly six independent English lines. For every line supply a Chinese translation and `color`, `size`, `taste`, `verb`, and `place` keywords. Show the complete bilingual story package for approval before creating visual assets.
 4. Create a visual bible and an anchor-image brief before generating scene images. Every scene with recurring characters must reference the approved anchor. If character drift persists through two prompt revisions, stop text-only retries and request a new or stronger anchor.
 5. Write `storyboard.json`, run `scripts/validate-story.mjs`, and fix only reported violations. Do not silently modify an approved script.
-6. Generate the manual Seedance package with `scripts/export-manual-seedance-package.mjs`. For connected generation, submit one dependent scene at a time and review the completed anchor-dependent output before moving on.
+6. Generate the manual Seedance package with `scripts/export-manual-seedance-package.mjs`. For BytePlus Ark, use `scripts/byteplus-ark.mjs` only after the approved storyboard and explicit per-stage confirmation. For connected generation, submit one dependent scene at a time and review the completed anchor-dependent output before moving on.
 7. Run `scripts/workflow-state.mjs status` before resuming a project. Preserve valid assets while revising a later stage.
 
 ## Required output contract
@@ -38,7 +39,7 @@ Use `assets/profiles/vertical-short.json` for the default contract. `storyboard.
 - a motion prompt for a five-second image-to-video clip;
 - a duration from 4 to 15 seconds.
 
-Read `references/provider-setup.md` only when the user selects a provider or asks about automation. Read `references/data-contract.md` when creating scripts or repairing project files.
+Read `references/provider-setup.md` only when the user selects a provider or asks about automation. Read `references/byteplus-ark.md` when the user selects the BytePlus Ark route. Read `references/data-contract.md` when creating scripts or repairing project files.
 
 ## Boundaries
 

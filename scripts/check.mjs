@@ -8,6 +8,7 @@ const files = [
   path.join(skillDir, "scripts", "init-project.mjs"),
   path.join(skillDir, "scripts", "validate-story.mjs"),
   path.join(skillDir, "scripts", "export-manual-seedance-package.mjs"),
+  path.join(skillDir, "scripts", "byteplus-ark.mjs"),
   path.join(skillDir, "scripts", "workflow-state.mjs"),
 ];
 for (const file of files) {

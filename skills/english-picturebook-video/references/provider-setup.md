@@ -14,6 +14,12 @@ Use this route only when an already configured generation connector is available
 
 Do not silently upload private local images to a public URL. A direct API integration needs a user-approved, provider-compatible media transfer mechanism. Keys belong in a local ignored environment file, never in `brief.json`, `storyboard.json`, prompts, command arguments, or Git.
 
+## BytePlus Ark
+
+Use the dedicated `byteplus-ark` route only after reading `byteplus-ark.md`. The provided adapter uses Ark for Seedream images and LAS for Seedance videos. It keeps generated assets on disk and stores only task metadata plus temporary provider URLs in ignored `byteplus-ark-state.json`.
+
+Run `doctor` before submitting work. Image generation requires `ARK_API_KEY`; video generation requires `LAS_API_KEY`. Do not assume that a ModelArk key is automatically valid for LAS. Require `--confirm` for every anchor, image batch, and individual video submission. Stop after each video job until the user reviews the completed clip.
+
 ## Local motion-book
 
 Use generated still images, narration, caption timing, slow pan/zoom, and crossfades when the user has no video generation credits. Label this output accurately as a motion-book or illustrated video; it is not a generative image-to-video result.
