@@ -1,0 +1,11 @@
+{
+  "id": "storybook-wide",
+  "ratio": "16:9",
+  "sceneCount": 6,
+  "sceneDurationSeconds": 5,
+  "targetDurationSeconds": 30,
+  "audienceAge": "5-9",
+  "englishLevel": "CEFR A1",
+  "captions": ["en", "zh"],
+  "defaultRoute": "local-motion-book"
+}

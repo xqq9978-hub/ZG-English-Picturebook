@@ -1,0 +1,9 @@
+{
+  "name": "english-picturebook-video-skill",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "example": "node skills/english-picturebook-video/scripts/validate-story.mjs examples/benny-and-the-apple/storyboard.json --write-report"
+  }
+}

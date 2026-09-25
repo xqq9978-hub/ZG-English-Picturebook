@@ -1,0 +1,7 @@
+interface:
+  display_name: "English Picturebook Video"
+  short_description: "Create six-scene English picturebook video packages"
+  brand_color: "#4C3F91"
+  default_prompt: "Use $english-picturebook-video to create a six-scene English picturebook animation about a shy rabbit and a friendly apple."
+policy:
+  allow_implicit_invocation: true

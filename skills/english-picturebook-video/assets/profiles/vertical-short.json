@@ -1,0 +1,11 @@
+{
+  "id": "vertical-short",
+  "ratio": "3:4",
+  "sceneCount": 6,
+  "sceneDurationSeconds": 5,
+  "targetDurationSeconds": 30,
+  "audienceAge": "4-8",
+  "englishLevel": "CEFR pre-A1 to A1",
+  "captions": ["en", "zh"],
+  "defaultRoute": "manual-seedance"
+}
